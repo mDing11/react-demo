@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Route,Link} from 'react-router-dom';
 import { Input, Button, List } from "antd";
 import store from "./store";
 import {
@@ -50,8 +51,15 @@ class TodoList extends Component {
   }
 
   render() {
+    const HomePage =() => <div>Home Page</div>
+    const UsersPage = () => <div>Users Page</div>
+
     return (
       <div>
+        <Link to='/'>首页</Link>
+        <Link to='/users'>用户</Link>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/users" component={UsersPage} />
         <Input
           value={this.state.inputValue}
           placeholder="todo info"
