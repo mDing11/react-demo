@@ -9,8 +9,8 @@ const HomePage = props => {
     return (<div>
         {console.log('props', props)}
         <div >
-            <Link to={`/shop/list`}>订单</Link>
-            <Link to='/car'>购物车</Link>
+            <Link to={`/shop/list`}>订单11</Link>
+            <Link to='/car'>购物车11</Link>
         </div>
         <div>
             <Switch>
@@ -19,7 +19,7 @@ const HomePage = props => {
                     <h3>Please select a topic.</h3>
                 </Route>
                 <Route path={`/shop/list`} component={List} />
-                {/* <Route path={`/shop`} component={Shop}/> */}
+                <Route path={`/shop`} component={Shop} />
             </Switch>
         </div>
     </div>)
